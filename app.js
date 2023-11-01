@@ -1,23 +1,19 @@
-const player = {
-    name: "jun",
-    points: 10,
-    handsome : true,
-    fat : "little bit"
+const age = parseInt(prompt("How old are you?"));
+
+
+if(isNaN(age) || age < 0){
+    console.log("please write a positive number");
+    /// condition == trye --> excute the code
+} else if (age < 18){
+    console.log("You are too young.");
+    /// condition == false --> excute the code
+} else if (age >= 18 && age <=50){
+    console.log("you can drink");
+    /// condition == false --> excute the code
+} else if (age >= 50 && age <=80){
+    console.log("you can drink, but please drink less");
+    /// condition == false --> excute the code
+} else if (age > 80){
+    console.log("do exercise");
+    /// condition == false --> excute the code
 }
-
-//불러오는 방식의 다양함
-console.log(player.name);
-console.log(player["name"]);
-
-//수정하기
-player.fat = false;
-console.log(player.fat);
-
-//추가하기
-player.lastName = 'potato';
-console.log(player.lastName);
-
-//계산하기
-console.log(player.points);
-player.points = player.points + 15;
-console.log(player.points);
