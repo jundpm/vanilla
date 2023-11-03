@@ -1,19 +1,44 @@
-const age = parseInt(prompt("How old are you?"));
+const h1 = document.querySelector("div.hello:first-child h1");
 
-
-if(isNaN(age) || age < 0){
-    console.log("please write a positive number");
-    /// condition == trye --> excute the code
-} else if (age < 18){
-    console.log("You are too young.");
-    /// condition == false --> excute the code
-} else if (age >= 18 && age <=50){
-    console.log("you can drink");
-    /// condition == false --> excute the code
-} else if (age >= 50 && age <=80){
-    console.log("you can drink, but please drink less");
-    /// condition == false --> excute the code
-} else if (age > 80){
-    console.log("do exercise");
-    /// condition == false --> excute the code
+function handleTitleClick() {
+    //console.log("title was clicked!");
+    h1.style.color = "red";
 }
+function handleMouseEnter() {
+    h1.innerText = "Mouse is here!";
+}
+
+function handleMouseLeave() {
+    h1.innerText = "Mouse is gone!";
+
+}
+
+
+h1.addEventListener("click", handleTitleClick);
+h1.addEventListener("mouseenter", handleMouseEnter);
+h1.addEventListener("mouseleave", handleMouseLeave);
+
+
+function handleWindowResize() {
+    document.body.style.backgroundColor = "tomato";
+}
+
+window.addEventListener("resize",handleWindowResize);
+
+function handleWindowCopy() {
+    alert("copier!");
+}
+window.addEventListener("copy", handleWindowCopy);
+
+
+function handleWindowOffline() {
+    alert("SoS no Wifi");
+}
+
+window.addEventListener("offline", handleWindowOffline);
+
+function handleWindowOnline() {
+    alert("all good");
+}
+
+window.addEventListener("online", handleWindowOnline);
